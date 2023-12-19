@@ -1,4 +1,4 @@
-import { ResponseBodyType } from "@/type";
+import { ResponseBodyType } from "@/types";
 import { z } from "zod";
 
 const routeContextSchema = z.object({
@@ -13,10 +13,11 @@ export async function GET(
 ) {
   const body: ResponseBodyType = {
     method: "GET",
-    "accept_params": true,
+    accept_params: true,
     params: [{ id: context.params.id }],
-    "accept_body": false,
+    accept_body: false,
     message: "get a post by id",
+    data: []
   };
 
   return Response.json(body, {
@@ -31,10 +32,11 @@ export async function PUT(
 ) {
   const body: ResponseBodyType = {
     method: "PUT",
-    "accept_params": false,
+    accept_params: false,
     params: [{ id: context.params.id }],
-    "accept_body": true,
+    accept_body: true,
     message: "update a post",
+    data: []
   };
 
   return Response.json(body, {
@@ -49,10 +51,11 @@ export async function DELETE(
 ) {
   const body: ResponseBodyType = {
     method: "DELETE",
-    "accept_params": false,
+    accept_params: false,
     params: [{ id: context.params.id }],
-    "accept_body": true,
+    accept_body: true,
     message: "delete a post",
+    data: []
   };
 
   return Response.json(body, {

@@ -9,7 +9,7 @@ datasource db {
 
 model Post {
   id        Int      @id @default(autoincrement())
-  postId    String
+  postId    String   @unique
   title     String
   body      String
   author    String

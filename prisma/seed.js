@@ -1,6 +1,6 @@
-const prismaClient = require("@prisma/client");
+import { PrismaClient } from "@prisma/client";
 
-const prisma = new prismaClient.PrismaClient();
+const prisma = new PrismaClient();
 
 const data = [
   {
@@ -92,27 +92,18 @@ const data = [
 async function main() {
   console.log(`Start seeding ...`);
   for (let _post of data) {
-    const postCreated = await prisma.post.create({
+    let postCreated = await prisma.post.create({
       data: _post,
     });
-    console.log(`Created post with id: ${postCreated.id}`);
+    console.log(`Created post with id: ${postCreated?.id}`);
   }
+  console.log(`Seeding finished.`);
 }
 
-main()
-  .then(async () => {
-    try {
-      await prisma.$disconnect();
-    } catch (e) {
-      console.error("Error disconnecting from Prisma:", e);
-    }
-  })
-  .catch(async e => {
-    console.error("Error creating posts:", e);
-    try {
-      await prisma.$disconnect();
-    } catch (e) {
-      console.error("Error disconnecting from Prisma:", e);
-    }
-    process.exit(1);
-  });
+main().finally(async () => {
+  try {
+    await prisma.$disconnect();
+  } catch (e) {
+    console.error("Error disconnecting from Prisma:", e);
+  }
+});

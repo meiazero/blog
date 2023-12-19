@@ -1,4 +1,5 @@
 # blog-maikon-rios
+
 > A simple blog create for fun and learn more about Next.js, React and TDD with Typescript.
 
 ## Prerequisites
@@ -6,8 +7,6 @@
 - [Node.js 18.x or higher](https://nodejs.org/en/)
 - [bun](https://bun.sh/)
 - [Docker](https://www.docker.com/)
-
-
 
 ## Getting Started
 
