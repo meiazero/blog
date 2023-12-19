@@ -11,9 +11,10 @@
     "infra:up": "docker-compose -f infra/docker-compose.yaml up -d || docker compose -f infra/docker-compose.yaml up -d",
     "infra:down": "docker-compose -f infra/docker-compose.yaml down || docker compose -f infra/docker-compose.yaml down",
     "infra:clean": "docker-compose -f infra/docker-compose.yaml down --rmi all || docker compose -f infra/docker-compose.yaml down --rmi all",
-    "prisma:generate": "prisma generate",
+    "env:generate": "cp .env.example .env",
     "prisma:migrate": "prisma migrate dev",
-    "format": "prettier --write \"**/*.{js,ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{js,ts,tsx,md}\"",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "latest",
