@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:15.5-alpine3.18
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=my-secure-password
+      - POSTGRES_DB=blog-maikon-rios
+    volumes:
+      - postgres_data:/bitnami/postgresql
+
+volumes:
+  postgres_data:
