@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
@@ -10,6 +11,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Blog É de Lascar",
+  description: "Blog É de Lascar",
 };
 
 interface RootLayoutProps {
@@ -19,7 +21,12 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="pt-br">
-      <body className={cn("container", poppins.className)}>{children}</body>
+      <body
+        className={cn("bg-white-smoke text-black-smoke", poppins.className)}
+      >
+        <Header />
+        <main className="container">{children}</main>
+      </body>
     </html>
   );
 }
