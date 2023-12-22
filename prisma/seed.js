@@ -58,7 +58,6 @@ const data = [
     author: "Unknown Author",
     published: true,
   },
-
   {
     postId: uuid(),
     title:
