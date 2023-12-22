@@ -1,6 +1,6 @@
 # blog
 
-> A simple blog create for fun and learn more about Next.js, React and TDD with Typescript.
+> A simple blog create for fun and learn more about Next.js, React with Typescript.
 
 ## Prerequisites
 
