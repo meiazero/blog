@@ -2,7 +2,6 @@ import { getAllPost } from "@/infra/services/get-all-posts";
 import { ResponseBodyType } from "@/types";
 
 export async function GET(request: Request) {
-
   const data = await getAllPost();
 
   const body: ResponseBodyType = {
@@ -11,8 +10,7 @@ export async function GET(request: Request) {
     params: [],
     accept_body: false,
     message: "get all posts",
-    // @ts-ignore
-    data
+    data,
   };
 
   return Response.json(body, {
@@ -28,7 +26,7 @@ export async function POST(request: Request) {
     params: [],
     accept_body: true,
     message: "create a post",
-    data: []
+    data: [],
   };
 
   return Response.json(body, {

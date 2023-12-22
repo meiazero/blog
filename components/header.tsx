@@ -8,7 +8,7 @@ export function Header() {
     <header className="bg-white">
       <div className="container flex flex-row items-center justify-between">
         <Link href="/" title="logo">
-          <Icons.logo className="h-28 w-28" />
+          <Icons.logo className="w-32" />
         </Link>
 
         <nav>

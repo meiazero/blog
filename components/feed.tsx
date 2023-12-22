@@ -1,5 +1,6 @@
 import { env } from "@/env.mjs";
 import { Post } from "@/types";
+import Link from "next/link";
 
 export async function Feed() {
   const response = await fetch(`${env.NEXT_PUBLIC_API_URL}/posts/`, {
@@ -30,7 +31,9 @@ function PostItem(post: Post) {
   return (
     <article className="px-2 py-4">
       <div>
-        <h2 className="text-xl font-bold hover:underline" title={post.title}>{post.title}</h2>
+        <h2 className="text-xl font-bold hover:underline" title={post.title}>
+          <Link href={`/post/${post.postId}`}>{post.title}</Link>
+        </h2>
         <span className="text-sm">
           {/* TODO: fazer uma função que pega a data de criação e calcula quanto tempo foi criado desde que foi criado */}
           <span className="capitalize text-gray-600">
