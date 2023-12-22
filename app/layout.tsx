@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Blog É de Lascar",
-  description: "Blog É de Lascar",
+  title: "Blog sobreTech",
+  description: "Blog sobre tecnologia",
 };
 
 interface RootLayoutProps {

@@ -8,7 +8,7 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=my-secure-password
-      - POSTGRES_DB=blog-maikon-rios
+      - POSTGRES_DB=blog
     volumes:
       - postgres_data:/bitnami/postgresql
 
