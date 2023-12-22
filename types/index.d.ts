@@ -8,9 +8,17 @@ export type ResponseBodyType = {
 };
 
 export type Post = {
+  id?: number;
   postId: string;
   title: string;
   body: string;
   author: string;
-  published: boolean
+  published: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+};
+
+export type NavItem = {
+  name: string;
+  path: string;
 };
