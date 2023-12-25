@@ -8,6 +8,7 @@ async function createNewPost(post: Post) {
       postId: uuidv4(),
       title: post.title,
       body: post.body,
+      banner: post.banner as string,
       author: post.author,
       published: post.published,
     },
