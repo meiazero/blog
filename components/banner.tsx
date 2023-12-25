@@ -1,15 +1,17 @@
-import Image from "next/image";
+interface BannerProps {
+  url: string;
+  altImage?: string;
+  titleImage?: string;
+}
 
-export function Banner() {
+export function Banner(props: BannerProps) {
   return (
-    <div className="mt-6 flex items-center justify-center rounded-md border border-slate-400 p-2">
-      <Image
-        src="/banner.webp"
-        width={1200}
-        height={250}
-        alt="banner"
-        title="banner"
-        className="rounded-md"
+    <div className="mb-8 flex h-64 w-full items-center justify-center rounded-md border border-slate-400 bg-slate-200 p-1">
+      <img
+        src={props.url}
+        alt={props.altImage || ""}
+        title={props.titleImage || ""}
+        className="object-fit h-full w-full rounded-md"
       />
     </div>
   );

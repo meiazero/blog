@@ -12,6 +12,7 @@ export type Post = {
   postId: string;
   title: string;
   body: string;
+  banner?: string;
   author: string;
   published: boolean;
   createdAt?: Date;

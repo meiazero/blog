@@ -12,6 +12,7 @@ model Post {
   postId    String   @unique
   title     String
   body      String
+  banner    String
   author    String
   published Boolean
   createdAt DateTime @default(now())
