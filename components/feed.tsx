@@ -8,7 +8,6 @@ export async function Feed() {
     headers: {
       "Content-Type": "application/json",
     },
-    cache: "no-cache",
   }).then(response => response.json());
 
   let data = response?.data;
