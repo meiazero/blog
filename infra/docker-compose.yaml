@@ -9,6 +9,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=my-secure-password
       - POSTGRES_DB=blog
+      - TZ=America/Sao_Paulo
     volumes:
       - postgres_data:/bitnami/postgresql
 

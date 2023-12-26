@@ -5,10 +5,10 @@ import { Icons } from "./icons";
 
 export function Header() {
   return (
-    <header className="bg-white">
+    <header className="w-full bg-white">
       <div className="container flex flex-row items-center justify-between">
         <Link href="/" title="logo">
-          <Icons.logo className="w-32" />
+          <Icons.logo className="h-auto w-44" />
         </Link>
 
         <nav>

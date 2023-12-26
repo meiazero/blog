@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={cn("bg-white-smoke text-black-smoke", poppins.className)}
       >
         <Header />
-        <main className="container">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
